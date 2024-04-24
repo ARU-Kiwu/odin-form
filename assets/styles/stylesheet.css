@@ -149,7 +149,6 @@ label {
     position: relative;
     width: 100%;
     padding:15px;
-    position: relative;
     display: flex;
 }
 
@@ -196,6 +195,13 @@ input:valid:focus {
     border-radius: 3px;
 }
 
+input[type="email"]:not(:placeholder-shown) + label, input[type="tel"]:not(:placeholder-shown) + label{
+    text-align: left;
+    transform: translateY(-27px);
+    scale: 0.9;
+    background: var(--accent);
+}
+
 input:valid + label {
     text-align: left;
     transform: translateY(-27px);
@@ -213,6 +219,21 @@ input:valid + label {
     margin-top:10px;
     margin-left:10px;
     font-size: small;
+}
+
+#password-alert {
+    font-size: 0.70rem;
+    position: absolute;
+    transform: translateY(35px) translateX(10px);
+    color: var(--invalid);
+    transition:all 0.2s linear;
+    opacity: 0;
+}
+
+
+.buzz-animation {
+    animation: buzz 0.2s linear 3;
+    opacity: 1 !important;
 }
 
 @media only screen and (max-width: 700px) {
@@ -287,7 +308,17 @@ input:valid + label {
     }
 }
 
-
+@keyframes buzz {
+   0% {
+    transform: translateY(35px) translateX(10px);
+   }
+   50% {
+    transform: translateY(38px) translateX(5px);
+   }
+   100%{
+    transform: translateY(35px) translateX(10px);
+   }
+}
 
 @keyframes icon-animation {
     0% {
