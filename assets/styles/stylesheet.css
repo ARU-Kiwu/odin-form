@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Coolvetica;
+    src: url(/assets/font-face/coolvetica-rg.otf);
+  }
+
 :root {
 --text: #160622;
 --background: #f8f2fd;
@@ -145,6 +150,15 @@ label {
     background: var(--accent);
 }
 
+h1{
+    font-family: Coolvetica;
+    letter-spacing: 1pt;
+}
+
+p {
+    font-weight: bold;
+}
+
 .form-group {
     position: relative;
     width: 100%;
@@ -228,6 +242,10 @@ input:valid + label {
     color: var(--invalid);
     transition:all 0.2s linear;
     opacity: 0;
+}
+
+.confirm-password {
+    height: 70px;
 }
 
 
