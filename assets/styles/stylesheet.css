@@ -239,7 +239,7 @@ input:valid + label {
 #password-alert {
     font-size: 0.70rem;
     position: absolute;
-    transform: translateY(35px) translateX(10px);
+    transform: translateY(50px) translateX(10px);
     color: var(--invalid);
     transition:all 0.2s linear;
     opacity: 0;
@@ -329,13 +329,13 @@ input:valid + label {
 
 @keyframes buzz {
    0% {
-    transform: translateY(35px) translateX(10px);
+    transform: translateY(51px) translateX(10px);
    }
    50% {
-    transform: translateY(38px) translateX(5px);
+    transform: translateY(47px) translateX(5px);
    }
    100%{
-    transform: translateY(35px) translateX(10px);
+    transform: translateY(50px) translateX(10px);
    }
 }
 
